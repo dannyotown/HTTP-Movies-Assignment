@@ -26,20 +26,22 @@ const UpdateUser = (props) => {
             axios.put(`http://localhost:5000/api/movies/${props.match.params.id}`, updateMovie)
             .then(response=> {
                 alert('User Updated!')
-                props.history.push('/movies')
+                props.history.push('/')
             })
             .catch(error=>console.log(error))
-
     }
 
   return (
     <>
-    <form onSubmit={onHandleSubmit}>
+    <div className="updateUser">
+    <h1>Update User</h1>
+    <form className="updateUser" onSubmit={onHandleSubmit}>
         <input type="text" onChange={onHandleChange} name="title" placeholder="Title" value={updateMovie.title} />
         <input type="text" onChange={onHandleChange} name="director" placeholder="Director" value={updateMovie.director}/>
         <input type="number" onChange={onHandleChange} name="metascore" placeholder="MetaScore" value={updateMovie.metascore} />
         <button type="submit">Save</button>
     </form>
+    </div>
     </>
   );
 };
