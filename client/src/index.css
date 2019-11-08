@@ -75,3 +75,12 @@ body {
   color: red;
   text-align: center;
 }
+
+.updateUser{
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 75%;
+  justify-content: center;
+  margin: 0 auto;
+}
